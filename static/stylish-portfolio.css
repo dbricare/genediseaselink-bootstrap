@@ -64,9 +64,12 @@ body {
 hr.small {
     max-width: 100px;
 }
-
 hr.large {
     max-width: 300px;
+}
+hr.xlarge {
+    max-width: 600px;
+    margin-bottom: 50px;
 }
 
 /* Side Menu */

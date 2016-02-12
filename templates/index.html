@@ -58,7 +58,7 @@
                 <a href="#about" onclick = $("#menu-close").click(); >Introduction</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Analysis</a>
+                <a href="#services" onclick = $("#menu-close").click(); >Process</a>
             </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Results</a>
@@ -121,7 +121,9 @@
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <p class="intro">&nbsp;</p>  
             <hr class="large">       
-            <h2 class="subheading"><i>Using gene-disease association data to identify drug candidates that are likely to succeed can help reduce costs, development time and consumer drug prices.</i></h2>
+            <h2 class="subheading"><i>Considering gene-disease associations when selecting 
+            drug candidates can help reduce costs, development time and consumer drug 
+            prices.</i></h2>
             <hr class="large"> 
           </div>
         </div>            
@@ -148,7 +150,8 @@
                                 <h4>
                                     <strong>Sources</strong>
                                 </h4>
-                                <p>Gene-disease links are stored in databases and academic literature.</p>
+                                <p>Gene-disease links are stored in databases and academic 
+                                literature.</p>
                                 <a href="#collect" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -337,30 +340,47 @@
     <section id="details" class="about">
       <div class="container">
         <div class="row">
-
-	  <h2 class="subheading" id="collect">Data collection</h2>
-
-      <p>Data is sourced primarily from academic researchers who share their results through a variety of public databases.</p>
-
-      <ul>
-      <li>A list of around 10,000 established genetic conditions is available from the <a href="http://ghr.nlm.nih.gov/">NIH Genetics Home Reference</a>.</li>
-      <li>A list of gene-disease associations from peer-reviewed journals and several public databases is available at <a href="http://www.disgenet.org/">DisGeNet</a>. This database is current as of August 2015. This resource compiles information from:</li>
-
-        <ul>
-        <li>Curated databases: <a href="http://www.uniprot.org/">UniProt</a>, <a href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar</a>.</li>
-        <li>Automated databases: <a href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a href="http://www.informatics.jax.org/">Mouse Genome Database</a>, <a href="http://rgd.mcw.edu/">Rat Genome Database</a>.</li>
-        <li>Literature resources: <a href="http://geneticassociationdb.nih.gov/">Genetic Association Database</a>, <a href="http://www.dbs.ifi.lmu.de/~bundschu/LHGDN.html">Literature-derived Human Gene-Disease Network </a>, <a href="http://ibi.imim.es/befree/">BeFree</a>.</li>
-        </ul>
-
-      <li>The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype Ontology</a> database contains human-only associations between genes and diseases organized by phenotype. It is designed not only to identify gene-disease associations but also demonstrate how these links can be put to use by the medical community.</li>
-      <li>The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database contains gene-disease associations extracted from biomedical research abstracts with text mining algorithms.</li>
-      </ul>
-      
-      <p>&nbsp;</p>
-
-      <h2 class="subheading" id="organize">Data organization</h2>
-
-      <div class="table-responsive">
+          <h2 class="subheading" id="collect">Data collection</h2>
+          <p>Data is sourced primarily from academic researchers who share their results 
+          through a variety of public databases.</p>
+          <ul>
+            <li>A list of around 10,000 established genetic conditions is available from the <a href="http://ghr.nlm.nih.gov/">NIH Genetics Home Reference</a>.</li>
+            <li>A list of gene-disease associations from peer-reviewed journals and 
+            several public databases is available at <a 
+            href="http://www.disgenet.org/">DisGeNet</a>. This database is current as of 
+            August 2015. This resource compiles information from:</li>
+            <ul>
+              <li>Curated databases: <a href="http://www.uniprot.org/">UniProt</a>, <a 
+              href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a 
+              href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar</a>.
+              </li>
+              <li>Automated databases: <a href="http://ctdbase.org/">Comparative 
+              Toxicogenomics Database</a>, <a href="http://www.informatics.jax.org/">Mouse 
+              Genome Database</a>, <a href="http://rgd.mcw.edu/">Rat Genome Database</a>.
+              </li>
+              <li>Literature resources: <a 
+              href="http://geneticassociationdb.nih.gov/">Genetic Association 
+              Database</a>, <a 
+              href="http://www.dbs.ifi.lmu.de/~bundschu/LHGDN.html">Literature-derived 
+              Human Gene-Disease Network </a>, <a 
+              href="http://ibi.imim.es/befree/">BeFree</a>.
+              </li>
+            </ul>
+            <li>The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype 
+            Ontology</a> database contains human-only associations between genes and 
+            diseases organized by phenotype. It is designed not only to identify 
+            gene-disease associations but also demonstrate how these links can be put to 
+            use by the medical community.</li>
+            <li>The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database 
+            contains gene-disease associations extracted from biomedical research 
+            abstracts with text mining algorithms.
+            </li>
+          </ul>
+        <p>&nbsp;</p>
+        <hr class="xlarge">
+        <!-- <p>&nbsp;</p> -->
+        <h2 class="subheading" id="organize">Data organization</h2>
+        <div class="table-responsive">
           <table class="table">
           <tr>
           <th>Source</th>
@@ -393,26 +413,32 @@
           <td>>470000 GDAs</td>
           </tr>
           </table>
-      </div>
-      
-      <p>&nbsp;</p>
-
-      <h2 class="subheading" id="analysis">Data analysis</h2>
-
+        </div>
+        <p>&nbsp;</p>
+        <hr class="xlarge">
+        <!-- <p>&nbsp;</p> -->
+        <h2 class="subheading" id="analysis">Data analysis</h2>
         <figure class="figscore" >
-        <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
-        <img src="static/fullhist.png" width="100%">
+          <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
+          <img src="static/fullhist.png" width="100%">
         </figure>
-
       <p>There are two metrics based on the strength of association and the number of associations for each individual gene and each individual disease.</p>
       <ol>
-      <li><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i><br><br>
-      <i>0 < Strength of association < 1</i></li>
-  	  <li><b><i>Specificity score</b> is the inversion of the frequency describing the number of genes for an associated disease and the number of diseases for the associated gene. For example, </i><br><br>
-  	  <i>0 < Gene and disease frequency < 1</i></li>
+        <li><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + 
+        WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i>
+        <br><br>
+        <i>0 < Strength of association < 1</i>
+        </li>
+  	    <li><b><i>Specificity score</b> is the inversion of the frequency describing the 
+  	    number of genes for an associated disease and the number of diseases for the 
+  	    associated gene. For example, </i>
+  	    <br><br>
+  	    <i>0 < Gene and disease frequency < 1</i>
+  	    </li>
   	  </ol>
-
-      <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About Page</a> has additional information concerning the strength of association metric.</p>
+      <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About 
+      Page</a> has additional information concerning the strength of association 
+      metric.</p>
 
             </div>
             <!-- /.row -->
@@ -426,7 +452,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>About the Author</h2>
+                    <h2>About Me</h2>
                 </div>
             </div>
         </div>
@@ -437,12 +463,12 @@
               </div>
               <div class="col-md-9">
                 <p class="author">Hi, my name is Dan Bricarello. I received a PhD from the 
-                University of California, Davis in Dec. 2009 while developing an organic 
-                nanoparticle delivery system with antimicrobial &amp; anti-inflammatory 
-                properties.<br><br>
+                University of California, Davis in Dec 2009. For my dissertation, I 
+                developed an organic nanoparticle delivery system with antimicrobial &amp; 
+                anti-inflammatory properties.<br><br>
                 I continued developing this technology as a post-doc in Food Science &amp; 
                 Technology and eventually co-founded Vislactis Biotherapeutics to see if 
-                this idea could help people.<br><br>
+                this idea could help treat certain medical conditions.<br><br>
                 This entrepreneurial experience combined with my education in math and 
                 physics has driven me to pursue a career in data science, where I hope to 
                 apply my technical &amp; analytical skills to help business make smart 
@@ -467,7 +493,8 @@
 
                     <ul class="list-unstyled">
                         <li><a 
-                        href="mailto:daniel.bricarello@mg.thedataincubator.com"><i class="fa fa-envelope-square fa-fw fa-3x"></i></a>
+                        href="mailto:daniel.bricarello@mg.thedataincubator.com"><i 
+                        class="fa fa-envelope-square fa-fw fa-3x"></i></a>
 <!--                         </li> -->
 <!-- 
                     </ul>
