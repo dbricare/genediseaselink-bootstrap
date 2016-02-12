@@ -21,7 +21,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    transform: translate(0,-15%);
+    transform: translate(0,-5%);
 }
 
 .text-vertical-center h1 {
@@ -67,7 +67,6 @@ hr.small {
 
 hr.large {
     max-width: 300px;
-    padding-bottom: 20px;
 }
 
 /* Side Menu */
@@ -221,7 +220,7 @@ hr.large {
     opacity: 0.8;
 }
 
-/* Call to Action */
+/* Call to Action and Author */
 
 .call-to-action {
     padding: 50px 0;
@@ -229,6 +228,10 @@ hr.large {
 
 .call-to-action .btn {
     margin: 10px;
+}
+
+.call-to-author {
+    padding-bottom: 20px;
 }
 
 /* Map */
@@ -260,8 +263,8 @@ li              { margin-bottom: 24px; }
 .page           { border: 0px solid #fff; padding: 0px; background: white; }
 .page-primary	{ padding: 0px; border: 0px solid #000; width: 90%; margin: auto; }
 
-.intro          { padding-top: 40px; clear: left; }
-.figgda         { margin: 0px auto; padding-top: 40px; }
+.intro          { padding-top: 20px; }
+.figgda         { margin: 0px auto; padding-top: 10px; }
 .figscore       { float: right; width: 45%; margin: 0px auto; padding-left: 24px; 
                   padding-bottom: 24px; padding-top: 10px; }
 .fcap           { font-family: 'Raleway', sans-serif; text-align: center; 
@@ -276,7 +279,13 @@ li              { margin-bottom: 24px; }
 .mpl			{ border: 1px solid #777; padding: 24px; text-align: center; 
 				  width: 90%; margin: 0 auto; }
 .dtbl           { margin: 0px auto; border: 1px; }
-/* .footer			{ height: 100px; border-top: 1px solid #ccc; padding-top: 16px; } */
-.footertext		{ text-align: center; vertical-align: center; 
-				  color: #fff; }
-.error          { font-size: 1.0em; color: red; padding: 0; margin: 0px auto; }
+.author			{ text-align: left; padding: 10px 0 0 10px; }
+
+.img-rounded.auth {
+    /* float: left; */ 
+    /* padding: 0 20px 20px 0;  */
+}
+
+.error {
+    font-size: 1.0em; color: red; padding: 0; margin: 0px auto; 
+}

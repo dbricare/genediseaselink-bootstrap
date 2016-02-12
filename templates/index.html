@@ -83,35 +83,27 @@
     <section id="about" class="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-sm-6">
         <p class="intro"><a href="http://truveris.com/insights.html">Rising drug 
         prices</a> are a serious concern for many Americans.</p>
-
           <p class="intro">Little relief is expected as <a 
           href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> costs 
           continue to climb. As of 2016, FDA-approved drugs <a 
           href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 
           billion and 15 years of development time</a>.</p> 
-
         <p class="intro">A large percentage of this effort is wasted on failed drugs. Drug 
         candidates that make it out of the laboratory and into clinical trials have a <a  
         href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low success 
         rate</a> of around 10%.</p>
-
 <!--       <p>This data-centric approach is designed to help large and small pharmaceutical companies optimize the direction of their R&D efforts.</p> -->
-	  
-
         <p class="intro">A <a 
         href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 study</a> 
         suggests that the strength of association between a particular gene and medical 
         condition can help determine the probability of generating a successful 
         therapy.</p>
-
-        <p class="intro">Knowing which therapies are likely to succeed before beginning
-        drug development can help reduce costs, development time and consumer drug 
-        prices.</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-6 text-center">
+          <h3 class="fcap">Genetic Links to Health &amp; Disease</h3>
           <figure class="figgda" >
             <img src="static/gda_overview.png" width="100%">
             <figcaption class="fcap">Some diseases may be caused by multiple genes and a 
@@ -119,14 +111,22 @@
           </figure>
         </div>
 
-
 <!--       <p>If the gene-disease link is strong, a therapy that targets the associated gene is  likely to successfully treat the disease.</p> -->
 <!--       <p>Strength of association is determined by the amount and quality of data from computational and laboratory investigations of a specific gene-disease pair.</p> -->
 
-            </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <p class="intro">&nbsp;</p>  
+            <hr class="large">       
+            <h2 class="subheading"><i>Using gene-disease association data to identify drug candidates that are likely to succeed can help reduce costs, development time and consumer drug prices.</i></h2>
+            <hr class="large"> 
+          </div>
+        </div>            
+      </div>
+      <!-- /.container -->
     </section>
 
     <!-- Services -->
@@ -221,7 +221,8 @@
                     associations</h2>
                     <hr class="small">
                       <a name="gdaplot"></a>
-                      <p>Click on a data point to launch a pubmed search for that gene-disease pair</p> 
+                      <p>Click on a data point to launch a pubmed search for that 
+                      gene-disease pair</p> 
                       <div class="dropdown">
                       {% block dropdown %}
    
@@ -325,7 +326,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Still curious about the analysis?</h3>
-                    <a href="#details" class="btn btn-lg btn-light">Keep Scrolling</a>
+                    <a href="#details" class="btn btn-lg btn-light">Continue Reading</a>
 <!--                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
 
                 </div>
@@ -420,30 +421,65 @@
     </section>
 
 
-    <!-- Map -->
+    <!-- About the Author -->
+    <aside class="call-to-author bg-primary text-center" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>About the Author</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="static/headshot.jpg" class="img-rounded">
+              </div>
+              <div class="col-md-9">
+                <p class="author">Hi, my name is Dan Bricarello. I received a PhD from the 
+                University of California, Davis in Dec. 2009 while developing an organic 
+                nanoparticle delivery system with antimicrobial &amp; anti-inflammatory 
+                properties.<br><br>
+                I continued developing this technology as a post-doc in Food Science &amp; 
+                Technology and eventually co-founded Vislactis Biotherapeutics to see if 
+                this idea could help people.<br><br>
+                This entrepreneurial experience combined with my education in math and 
+                physics has driven me to pursue a career in data science, where I hope to 
+                apply my technical &amp; analytical skills to help business make smart 
+                decisions.</p>
+                    <!-- <a href="#details" class="btn btn-lg btn-light">Continue Reading</a> -->
+<!--                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </aside>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <hr class="large">                
-                    <h4><strong>Contact Us</strong></h4>
-                    <p>By Email or Linkedin</p>
+                    <h4><strong>Contact Info</strong></h4>
+<!--                     <p>By Email or Linkedin</p> -->
 
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a 
-                        href="mailto:daniel.bricarello@mg.thedataincubator.com">Email</a>
-                        </li>
+                        <li><a 
+                        href="mailto:daniel.bricarello@mg.thedataincubator.com"><i class="fa fa-envelope-square fa-fw fa-3x"></i></a>
+<!--                         </li> -->
+<!-- 
                     </ul>
                     <br>
                     <ul class="list-inline">
-                        <li>
+ -->
+<!--                         <li> -->
                             <a href = 
                             "https://www.linkedin.com/in/dan-bricarello-78281555">
                             <i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
-<!-- 
                         </li>
+<!-- 
                         <li>
                             <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                         </li>
