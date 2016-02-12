@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import operator, os, datetime
 from bokeh.plotting import figure, output_file, save, show, ColumnDataSource
-from bokeh.models import HoverTool
+from bokeh.models import HoverTool, OpenURL, TapTool
 from bokeh.resources import CDN
 from bokeh.embed import components, autoload_static
 
@@ -109,7 +109,7 @@ def index():  #remember the function name does not need to match the URL
 
 
     p = figure(plot_width=900, plot_height=600, tools=['box_zoom','pan','reset',
-    'save',hover], x_range=[0,0.8], y_range=[0,0.8], title='Gene-disease association surpassing high-scoring threshold')
+    'save',hover,'tap'], x_range=[0,0.8], y_range=[0,0.8], title='Gene-disease associations meeting high-quality threshold')
     p.title_text_font = 'Source Sans Pro'
     p.xaxis.axis_label = 'Association Score'
     p.yaxis.axis_label = 'Specificity Score'
@@ -126,6 +126,10 @@ def index():  #remember the function name does not need to match the URL
 
     p.circle('x', 'y', size=20, fill_alpha=0.8, color=dfall['color'], source=source, 
     line_width=1, line_color='#000000', name='pts')
+    
+    url = "http://www.ncbi.nlm.nih.gov/pubmed/?term=@desc+@desc2"
+    taptool = p.select(type=TapTool)
+    taptool.callback = OpenURL(url=url)
     
     p.responsive = True
 
