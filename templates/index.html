@@ -224,51 +224,59 @@
                     associations</h2>
                     <hr class="small">
                       <a name="gdaplot"></a>
-                      <p>Click on a data point to launch a pubmed search for that 
-                      gene-disease pair</p> 
+                      <p style="font-size:0.8em;"><i>Click on a data point to launch a pubmed search for that gene-disease pair</i></p> 
                       <div class="dropdown">
                       {% block dropdown %}
    
-    <form method="post" action="index"> <!-- class="form-control"> --> <!-- action must match your next URL -->
-    <label class="caption" style="padding:0px 10px 0px 10px;">Disease Category:</label>
-<!--     <select class="form-control" id="dropdownMenu1" name="disId"> -->
-    <select name="selectioncat" onchange="javascript: submit()">
-      {% for dis in catlist %}
-          {% if dis[0]==selcat %}
-            <option value="{{ dis[0] }}" selected>{{ dis[1] }}</option>
-          {% else %}
-            <option value="{{ dis[0] }}">{{ dis[1] }}</option>
-          {% endif %}
-      {% endfor %}
-    </select>
-    <label class="caption" style="padding:0px 10px 0px 20px;">Association Type:</label>
-    <select name="selectiontype" onchange="javascript: submit()">
-      {% for atype in atypelist %}
-          {% if atype[0]==selatype %}
-            <option value="{{ atype[0] }}" selected>{{ atype[1] }}</option>
-          {% else %}
-            <option value="{{ atype[0] }}">{{ atype[1] }}</option>
-          {% endif %}
-      {% endfor %}
-    </select>
-    <label class="caption" style="padding:0px 10px 0px 20px;">Highest Scoring:</label>
-    <select name="selectioncir" onchange="javascript: submit()">
-      {% for perc in perclist %}
-          {% if perc[0]==selperc %}
-            <option value="{{ perc[0] }}" selected>{{ perc[1] }}</option>
-          {% else %}
-            <option value="{{ perc[0] }}">{{ perc[1] }}</option>
-          {% endif %}
-      {% endfor %}
-    </select>
-<!-- 
-    &nbsp;&nbsp;&nbsp;
-    <input type="submit" value="Display">
- -->
-    {% endblock dropdown %}
+    <form method="post" action="index" class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-5 control-label">Disease Category:</label>
+        <div class="col-sm-5">
+           <select class="form-control" name="selectioncat" onchange="javascript: 
+           submit()">
+            {% for dis in catlist %}
+                {% if dis[0]==selcat %}
+                  <option value="{{ dis[0] }}" selected>{{ dis[1] }}</option>
+                {% else %}
+                  <option value="{{ dis[0] }}">{{ dis[1] }}</option>
+                {% endif %}
+            {% endfor %}
+           </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label">Association Type:</label>
+        <div class="col-sm-2">
+          <select class="form-control" name="selectiontype" onchange="javascript: 
+          submit()">
+          {% for atype in atypelist %}
+              {% if atype[0]==selatype %}
+                <option value="{{ atype[0] }}" selected>{{ atype[1] }}</option>
+              {% else %}
+                <option value="{{ atype[0] }}">{{ atype[1] }}</option>
+              {% endif %}
+          {% endfor %}
+          </select>
+        </div>     
+        <label class="col-sm-3 control-label">Highest Scoring:</label>
+        <div class="col-sm-2">  
+          <select class="form-control" name="selectioncir" onchange="javascript: 
+          submit()">
+          {% for perc in perclist %}
+              {% if perc[0]==selperc %}
+                <option value="{{ perc[0] }}" selected>{{ perc[1] }}</option>
+              {% else %}
+                <option value="{{ perc[0] }}">{{ perc[1] }}</option>
+              {% endif %}
+          {% endfor %}
+          </select>
+        </div>
+      </div>
+        <!-- <input type="submit" value="Display"> -->
+                    {% endblock dropdown %}
     </form>
-      <div class="error">{{ errmsg | safe }}</div>
-    </div>
+    <div class="error">{{ errmsg | safe }}</div>
+  </div>
     <div class="bokeh">
       {{ div | safe }}
     </div>

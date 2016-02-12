@@ -68,7 +68,7 @@ hr.large {
     max-width: 300px;
 }
 hr.xlarge {
-    max-width: 600px;
+    width: 50%;
     margin-bottom: 50px;
 }
 
@@ -259,7 +259,8 @@ footer {
 /* @grid-gutter-width: 30px; */
 
 li              { margin-bottom: 24px; }
-
+label           { font-family: 'Raleway', sans-serif; 
+                  font-weight: 400; text-decoration: none;}
 
 /* .centered { */
 
@@ -274,7 +275,7 @@ li              { margin-bottom: 24px; }
                   font-weight: 600; }
 .subheading		{ font-family: 'Raleway'; color: #444; clear: both; font-weight: 500;
                   padding: 16px 0 16px 0; }
-.caption		{ font-family: 'Raleway', sans-serif; font-weight: 500; padding-top: 16px;
+.caption		{ font-family: 'Raleway', sans-serif; font-weight: 400; padding-top: 16px;
                   text-align: center; color: #444; }
 .dropdown       { /* padding-top: 16px; */ padding-bottom: 16px; text-align: center; }
 .graphmenu      { padding: 0 20px 0 20px; }

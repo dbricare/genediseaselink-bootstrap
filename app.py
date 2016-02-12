@@ -109,7 +109,7 @@ def index():  #remember the function name does not need to match the URL
 
 
     p = figure(plot_width=900, plot_height=600, tools=['box_zoom','pan','reset',
-    'save',hover,'tap'], x_range=[0,0.8], y_range=[0,0.8], title='Gene-disease associations meeting high-quality threshold')
+    'save',hover,'tap'], x_range=[0,0.8], y_range=[0,0.8], title='Gene-disease pairs above high-quality threshold')
     p.title_text_font = 'Source Sans Pro'
     p.xaxis.axis_label = 'Association Score'
     p.yaxis.axis_label = 'Specificity Score'
