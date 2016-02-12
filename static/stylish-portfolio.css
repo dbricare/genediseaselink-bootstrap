@@ -14,12 +14,14 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
 }
 
 .text-vertical-center {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    transform: translate(0,-15%);
 }
 
 .text-vertical-center h1 {
@@ -61,6 +63,11 @@ body {
 
 hr.small {
     max-width: 100px;
+}
+
+hr.large {
+    max-width: 300px;
+    padding-bottom: 20px;
 }
 
 /* Side Menu */
@@ -155,17 +162,21 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../static/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    color: white;
 }
 
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 70px 0 70px 0;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 
 /* Services */
@@ -185,7 +196,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: url(../static/callout.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -235,5 +246,37 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 0px 0;
+    font-size: 14px; 
 }
+
+/* @grid-gutter-width: 30px; */
+
+li              { margin-bottom: 24px; }
+
+
+/* .centered { */
+
+.page           { border: 0px solid #fff; padding: 0px; background: white; }
+.page-primary	{ padding: 0px; border: 0px solid #000; width: 90%; margin: auto; }
+
+.intro          { padding-top: 40px; clear: left; }
+.figgda         { margin: 0px auto; padding-top: 40px; }
+.figscore       { float: right; width: 45%; margin: 0px auto; padding-left: 24px; 
+                  padding-bottom: 24px; padding-top: 10px; }
+.fcap           { font-family: 'Raleway', sans-serif; text-align: center; 
+                  font-weight: 600; }
+.subheading		{ font-family: 'Raleway'; color: #444; clear: both; font-weight: 500;
+                  padding: 16px 0 16px 0; }
+.caption		{ font-family: 'Raleway', sans-serif; font-weight: 500; padding-top: 16px;
+                  text-align: center; color: #444; }
+.dropdown       { /* padding-top: 16px; */ padding-bottom: 16px; text-align: center; }
+.graphmenu      { padding: 0 20px 0 20px; }
+.bokeh			{ border: 1px solid #777; padding: 0 20px 0 20px; text-align: left; }
+.mpl			{ border: 1px solid #777; padding: 24px; text-align: center; 
+				  width: 90%; margin: 0 auto; }
+.dtbl           { margin: 0px auto; border: 1px; }
+/* .footer			{ height: 100px; border-top: 1px solid #ccc; padding-top: 16px; } */
+.footertext		{ text-align: center; vertical-align: center; 
+				  color: #fff; }
+.error          { font-size: 1.0em; color: red; padding: 0; margin: 0px auto; }

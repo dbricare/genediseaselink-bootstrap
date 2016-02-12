@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" type="text/css" />
+    <link rel=stylesheet type="text/css" href='{{ url_for('static',filename='style.css')}}'>
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
+    {{ jumpscript | safe }}
+    {{ script | safe }}
+  </head>
+
+  <body>
+    <div class="page"><!-- &nbsp; -->
+
+      <div class="header" id="grad1">
+        <h1 id="grad1" class="headertop">Uncovering strong &amp; specific genetic links to disease</h1>
+        <h2 id="grad1" class="headerbtm">A data-centric approach to drug development</h2>
+      </div>
+      
+    <div class="page-primary">
+
+      <figure class="figgda" >
+        <img src="static/gda_overview.png" width="100%">
+        <figcaption class="fcap">Some diseases may be caused by multiple genes and a single gene may influence one or more diseases.</figcaption>
+      </figure>
+
+      <p class="intro"><a href="http://truveris.com/insights.html">Rising drug prices</a> are a serious concern for many Americans.</p>
+
+      <p class="intro">Little relief is expected as <a href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> costs continue to climb. As of 2016, FDA-approved drugs <a href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 billion and 15 years of development time</a>.</p> 
+
+      <p class="intro">A large percentage of this effort is wasted on failed drugs. Drug candidates that make it out of the laboratory and into clinical trials have a <a href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low success rate</a> of around 10%.</p>
+
+<!--       <p>This data-centric approach is designed to help large and small pharmaceutical companies optimize the direction of their R&D efforts.</p> -->
+	  
+
+      <p class="intro">A <a href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 study</a> suggests that the strength of association between a particular gene and medical condition can help determine the probability of generating a successful therapy.</p>
+
+      <p class="intro">Knowing which therapies are likely to succeed before beginning drug development can help reduce costs, development time and consumer drug prices.</p>
+<!--       <p>If the gene-disease link is strong, a therapy that targets the associated gene is  likely to successfully treat the disease.</p> -->
+<!--       <p>Strength of association is determined by the amount and quality of data from computational and laboratory investigations of a specific gene-disease pair.</p> -->
+
+      <p>&nbsp;</p>
+
+    <h2 class="subheading">Advantages</h2>
+
+      <p class="intro"><b>Measuring the strength of gene-disease associations (GDAs) has several additional benefits:</b></p>  
+
+      <ol>
+      <li>Identifying relationships among cellular pathways improves understanding of disease pathology.</li>
+      <li>Providing researchers with human-validated targets eliminates the need for traditional cell culture and animal model experiments whose results aren't guaranteed to translate to humans.</li>
+<!--       <li>Alternative laboratory-based drug discovery is very costly, time-consuming, and suffers from a low success rate.</li> -->
+      <li>Gene-editing technologies such as <a href="https://en.wikipedia.org/wiki/CRISPR">CRISPR-Cas</a> show strong promise as an entirely new treatment approach. If a disease-causing gene can be identified, it may be possible to develop a gene therapy to treat the genetic source directly.</li>
+      </ol>
+        
+        <p class="intro">&nbsp;</p>
+        
+    </div>
+
+  <div class="box">
+
+		<h2 class="caption">Therapeutic potential of gene-disease associations</h2>
+
+		<p><u><b>Quick interpretation:</b></u>&nbsp; diseases with the highest potential  are found toward the top and right-hand side of the chart. These regions correspond to fewer shared links and stronger association respectively.</p>
+
+		<p><u><b>Additional insights:</b></u>&nbsp; the <a href="#description">data collection, organization, and analysis</a></i> sections below contain additional information.</p>
+
+        <a name="gdaplot"></a>
+
+    <div class="dropdown">
+    {% block dropdown %}
+    
+<!--     <label for="dropdownMenu1">Disease category:</label> -->
+    <form method="post" action="index" > <!-- action must match your next URL -->
+    
+    <label class="caption" style="padding:0px 10px 0px 10px;">Disease Category:</label>
+
+<!--     <select class="form-control" id="dropdownMenu1" name="disId"> -->
+    <select name="selectioncat" onchange="javascript: submit()">
+      {% for dis in catlist %}
+          {% if dis[0]==selcat %}
+            <option value="{{ dis[0] }}" selected>{{ dis[1] }}</option>
+          {% else %}
+            <option value="{{ dis[0] }}">{{ dis[1] }}</option>
+          {% endif %}
+      {% endfor %}
+    </select>
+
+    <label class="caption" style="padding:0px 10px 0px 20px;">Association Type:</label>
+
+    <select name="selectiontype" onchange="javascript: submit()">
+      {% for atype in atypelist %}
+          {% if atype[0]==selatype %}
+            <option value="{{ atype[0] }}" selected>{{ atype[1] }}</option>
+          {% else %}
+            <option value="{{ atype[0] }}">{{ atype[1] }}</option>
+          {% endif %}
+      {% endfor %}
+    </select>
+    
+    <label class="caption" style="padding:0px 10px 0px 20px;">Highest Scoring:</label>
+
+    <select name="selectioncir" onchange="javascript: submit()">
+      {% for perc in perclist %}
+          {% if perc[0]==selperc %}
+            <option value="{{ perc[0] }}" selected>{{ perc[1] }}</option>
+          {% else %}
+            <option value="{{ perc[0] }}">{{ perc[1] }}</option>
+          {% endif %}
+      {% endfor %}
+    </select>
+    
+    &nbsp;&nbsp;&nbsp;
+
+<!--     <input type="submit" value="Display"> -->
+
+    {% endblock dropdown %}
+    
+    </form>
+    
+      <div class="error">{{ errmsg | safe }}</div>
+    </div>
+
+
+    <div class="bokeh">
+      {{ div | safe }}
+    </div>
+
+    <h2 class="caption">Gene-disease association by disease area</h2>
+      <div class="mpl">
+        <img src="static/catdist.png">
+      </div>
+
+  </div>
+
+  <div class="page-primary">
+    <p>&nbsp;</p>        
+
+	  <h2 class="subheading" id="description">Data collection</h2>
+
+      <p>Data is sourced primarily from academic researchers who share their results through a variety of public databases.</p>
+
+      <ul>
+      <li>A list of around 10,000 established genetic conditions is available from the <a href="http://ghr.nlm.nih.gov/">NIH Genetics Home Reference</a>.</li>
+      <li>A list of gene-disease associations from peer-reviewed journals and several public databases is available at <a href="http://www.disgenet.org/">DisGeNet</a>. This database is current as of August 2015. This resource compiles information from:</li>
+
+        <ul>
+        <li>Curated databases: <a href="http://www.uniprot.org/">UniProt</a>, <a href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar</a>.</li>
+        <li>Automated databases: <a href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a href="http://www.informatics.jax.org/">Mouse Genome Database</a>, <a href="http://rgd.mcw.edu/">Rat Genome Database</a>.</li>
+        <li>Literature resources: <a href="http://geneticassociationdb.nih.gov/">Genetic Association Database</a>, <a href="http://www.dbs.ifi.lmu.de/~bundschu/LHGDN.html">Literature-derived Human Gene-Disease Network </a>, <a href="http://ibi.imim.es/befree/">BeFree</a>.</li>
+        </ul>
+
+      <li>The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype Ontology</a> database contains human-only associations between genes and diseases organized by phenotype. It is designed not only to identify gene-disease associations but also demonstrate how these links can be put to use by the medical community.</li>
+      <li>The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database contains gene-disease associations extracted from biomedical research abstracts with text mining algorithms.</li>
+      </ul>
+      
+      <p>&nbsp;</p>
+
+      <h2 class="subheading">Data organization</h2>
+
+      <table cellspacing="12px" style="margin: 0px auto;">
+      <tr>
+      <th>Source</th>
+      <th>Format</th>
+      <th>Extraction</th>
+      <th>Content</th>
+      </tr>
+      <tr>
+      <td>NIH Genetics Reference</td>
+      <td>HTML</td>
+      <td>Web scrape with beautiful soup</td>
+      <td>Disease categories, few GDAs</td>
+      </tr>
+      <tr>
+      <td>DisGeNet</td>
+      <td>CSV</td>
+      <td>Download and load into pandas dataframe</td>
+      <td>>420000 GDAs</td>
+      </tr>
+      <tr>
+      <td>Human Phenotype Ontology</td>
+      <td>SQL & TSV</td>
+      <td>Query through sqlite3, ipython, and pandas</td>
+      <td>>115000 GDAs</td>
+      </tr>
+      <tr>
+      <td>DISEASES</td>
+      <td>TSV</td>
+      <td>Download and load into pandas dataframe</td>
+      <td>>470000 GDAs</td>
+      </tr>
+      </table>
+      
+      <p>&nbsp;</p>
+
+      <h2 class="subheading">Data analysis</h2>
+
+        <figure class="figgda" >
+        <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
+        <img src="static/fullhist.png" width="100%">
+        </figure>
+
+      <p>There are two metrics based on the strength of association and the number of associations for each individual gene and each individual disease.</p>
+      <ul><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i><br><br>
+      <i>0 < Strength of association < 1</i>
+      </ul>
+  	  <ul><b><i>Specificity score</b> is the inversion of the frequency describing the number of genes for an associated disease and the number of diseases for the associated gene. For example, </i><br><br>
+  	  <i>0 < Gene and disease frequency < 1</i>
+  	  </ul>
+
+      <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About Page</a> has additional information concerning the strength of association metric.</p>
+    
+      <p>&nbsp;</p>
+  </div>
+
+    <div class="footer" id="grad1">
+      <h3 class="footertext" id="grad1">Last Updated: {{ updated }}</h3>
+    </div>
+  </div>
+
+  </body>
+</html>

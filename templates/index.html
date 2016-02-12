@@ -1,80 +1,231 @@
-<!doctype html>
-<html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Uncovering strong and specific genetic links to disease</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static',filename='bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static',filename='stylish-portfolio.css')}}" rel="stylesheet">
+    
+    <!-- <link href="{{url_for('static',filename='style.css')}}" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+
+<link rel='stylesheet' href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css')}}">
+
     <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" type="text/css" />
-    <link rel=stylesheet type="text/css" href='{{ url_for('static',filename='style.css')}}'>
+
     <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
     {{ jumpscript | safe }}
     {{ script | safe }}
-  </head>
 
-  <body>
-    <div class="page"><!-- &nbsp; -->
 
-      <div class="header" id="grad1">
-        <h1 id="grad1" class="headertop">Uncovering strong &amp; specific genetic links to disease</h1>
-        <h2 id="grad1" class="headerbtm">A data-centric approach to drug development</h2>
-      </div>
-      
-    <div class="page-primary">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-      <figure class="figgda" >
-        <img src="static/gda_overview.png" width="100%">
-        <figcaption class="fcap">Some diseases may be caused by multiple genes and a single gene may influence one or more diseases.</figcaption>
-      </figure>
+</head>
 
-      <p class="intro"><a href="http://truveris.com/insights.html">Rising drug prices</a> are a serious concern for many Americans.</p>
+<body>
 
-      <p class="intro">Little relief is expected as <a href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> costs continue to climb. As of 2016, FDA-approved drugs <a href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 billion and 15 years of development time</a>.</p> 
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Navigation</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >Introduction</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Analysis</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Results</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-      <p class="intro">A large percentage of this effort is wasted on failed drugs. Drug candidates that make it out of the laboratory and into clinical trials have a <a href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low success rate</a> of around 10%.</p>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Genetic Links to Health</h1>
+            <h3>A data-centric approach to drug development</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+        <p class="intro"><a href="http://truveris.com/insights.html">Rising drug 
+        prices</a> are a serious concern for many Americans.</p>
+
+          <p class="intro">Little relief is expected as <a 
+          href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> costs 
+          continue to climb. As of 2016, FDA-approved drugs <a 
+          href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 
+          billion and 15 years of development time</a>.</p> 
+
+        <p class="intro">A large percentage of this effort is wasted on failed drugs. Drug 
+        candidates that make it out of the laboratory and into clinical trials have a <a  
+        href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low success 
+        rate</a> of around 10%.</p>
 
 <!--       <p>This data-centric approach is designed to help large and small pharmaceutical companies optimize the direction of their R&D efforts.</p> -->
 	  
 
-      <p class="intro">A <a href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 study</a> suggests that the strength of association between a particular gene and medical condition can help determine the probability of generating a successful therapy.</p>
+        <p class="intro">A <a 
+        href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 study</a> 
+        suggests that the strength of association between a particular gene and medical 
+        condition can help determine the probability of generating a successful 
+        therapy.</p>
 
-      <p class="intro">Knowing which therapies are likely to succeed before beginning drug development can help reduce costs, development time and consumer drug prices.</p>
+        <p class="intro">Knowing which therapies are likely to succeed before beginning
+        drug development can help reduce costs, development time and consumer drug 
+        prices.</p>
+        </div>
+        <div class="col-md-6">
+          <figure class="figgda" >
+            <img src="static/gda_overview.png" width="100%">
+            <figcaption class="fcap">Some diseases may be caused by multiple genes and a 
+            single gene may influence one or more diseases.</figcaption>
+          </figure>
+        </div>
+
+
 <!--       <p>If the gene-disease link is strong, a therapy that targets the associated gene is  likely to successfully treat the disease.</p> -->
 <!--       <p>Strength of association is determined by the amount and quality of data from computational and laboratory investigations of a specific gene-disease pair.</p> -->
 
-      <p>&nbsp;</p>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-    <h2 class="subheading">Advantages</h2>
-
-      <p class="intro"><b>Measuring the strength of gene-disease associations (GDAs) has several additional benefits:</b></p>  
-
-      <ol>
-      <li>Identifying relationships among cellular pathways improves understanding of disease pathology.</li>
-      <li>Providing researchers with human-validated targets eliminates the need for traditional cell culture and animal model experiments whose results aren't guaranteed to translate to humans.</li>
-<!--       <li>Alternative laboratory-based drug discovery is very costly, time-consuming, and suffers from a low success rate.</li> -->
-      <li>Gene-editing technologies such as <a href="https://en.wikipedia.org/wiki/CRISPR">CRISPR-Cas</a> show strong promise as an entirely new treatment approach. If a disease-causing gene can be identified, it may be possible to develop a gene therapy to treat the genetic source directly.</li>
-      </ol>
-        
-        <p class="intro">&nbsp;</p>
-        
-    </div>
-
-  <div class="box">
-
-		<h2 class="caption">Therapeutic potential of gene-disease associations</h2>
-
-		<p><u><b>Quick interpretation:</b></u>&nbsp; diseases with the highest potential  are found toward the top and right-hand side of the chart. These regions correspond to fewer shared links and stronger association respectively.</p>
-
-		<p><u><b>Additional insights:</b></u>&nbsp; the <a href="#description">data collection, organization, and analysis</a></i> sections below contain additional information.</p>
-
-        <a name="gdaplot"></a>
-
-    <div class="dropdown">
-    {% block dropdown %}
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     
-<!--     <label for="dropdownMenu1">Disease category:</label> -->
-    <form method="post" action="index" > <!-- action must match your next URL -->
-    
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Data Processing</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-search fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Sources</strong>
+                                </h4>
+                                <p>Gene-disease links are stored in databases and academic literature.</p>
+                                <a href="#collect" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Aggregation</strong>
+                                </h4>
+                                <p>Data is collected and loaded into a centralized 
+                                database.</p>
+                                <a href="#organize" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-gears fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Analysis</strong>
+                                </h4>
+                                <p>Metrics are created to evaluate gene-disease link 
+                                quality.</p>
+                                <a href="#analysis" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bar-chart fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Visualization</strong>
+                                </h4>
+                                <p>Comparing gene-disease links based on two key 
+                                metrics.</p>
+                                <a href="#portfolio" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Results</h1>
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2 class="caption">Therapeutic potential of gene-disease 
+                    associations</h2>
+                    <hr class="small">
+                      <a name="gdaplot"></a>
+                      <div class="dropdown">
+                      {% block dropdown %}
+   
+    <form method="post" action="index"> <!-- class="form-control"> --> <!-- action must match your next URL -->
     <label class="caption" style="padding:0px 10px 0px 10px;">Disease Category:</label>
-
 <!--     <select class="form-control" id="dropdownMenu1" name="disId"> -->
     <select name="selectioncat" onchange="javascript: submit()">
       {% for dis in catlist %}
@@ -85,9 +236,7 @@
           {% endif %}
       {% endfor %}
     </select>
-
     <label class="caption" style="padding:0px 10px 0px 20px;">Association Type:</label>
-
     <select name="selectiontype" onchange="javascript: submit()">
       {% for atype in atypelist %}
           {% if atype[0]==selatype %}
@@ -97,9 +246,7 @@
           {% endif %}
       {% endfor %}
     </select>
-    
     <label class="caption" style="padding:0px 10px 0px 20px;">Highest Scoring:</label>
-
     <select name="selectioncir" onchange="javascript: submit()">
       {% for perc in perclist %}
           {% if perc[0]==selperc %}
@@ -109,34 +256,87 @@
           {% endif %}
       {% endfor %}
     </select>
-    
+<!-- 
     &nbsp;&nbsp;&nbsp;
-
-<!--     <input type="submit" value="Display"> -->
-
+    <input type="submit" value="Display">
+ -->
     {% endblock dropdown %}
-    
     </form>
-    
       <div class="error">{{ errmsg | safe }}</div>
     </div>
-
-
     <div class="bokeh">
       {{ div | safe }}
     </div>
-
+    <p>&nbsp;</p>
     <h2 class="caption">Gene-disease association by disease area</h2>
+    <hr class="small">
       <div class="mpl">
-        <img src="static/catdist.png">
+        <img src="static/catdist.png" style="max-width: 100%; max-height: 100%;">
       </div>
+    </div>
 
-  </div>
 
-  <div class="page-primary">
-    <p>&nbsp;</p>        
+                    <!-- 
+<div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+ -->
+                    <!-- /.row (nested) -->
+                    <!-- <a href="#" class="btn btn-dark">View More Items</a> -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-	  <h2 class="subheading" id="description">Data collection</h2>
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Still curious about the analysis?</h3>
+                    <a href="#details" class="btn btn-lg btn-light">Keep Scrolling</a>
+<!--                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <section id="details" class="about">
+      <div class="container">
+        <div class="row">
+
+	  <h2 class="subheading" id="collect">Data collection</h2>
 
       <p>Data is sourced primarily from academic researchers who share their results through a variety of public databases.</p>
 
@@ -156,67 +356,147 @@
       
       <p>&nbsp;</p>
 
-      <h2 class="subheading">Data organization</h2>
+      <h2 class="subheading" id="organize">Data organization</h2>
 
-      <table cellspacing="12px" style="margin: 0px auto;">
-      <tr>
-      <th>Source</th>
-      <th>Format</th>
-      <th>Extraction</th>
-      <th>Content</th>
-      </tr>
-      <tr>
-      <td>NIH Genetics Reference</td>
-      <td>HTML</td>
-      <td>Web scrape with beautiful soup</td>
-      <td>Disease categories, few GDAs</td>
-      </tr>
-      <tr>
-      <td>DisGeNet</td>
-      <td>CSV</td>
-      <td>Download and load into pandas dataframe</td>
-      <td>>420000 GDAs</td>
-      </tr>
-      <tr>
-      <td>Human Phenotype Ontology</td>
-      <td>SQL & TSV</td>
-      <td>Query through sqlite3, ipython, and pandas</td>
-      <td>>115000 GDAs</td>
-      </tr>
-      <tr>
-      <td>DISEASES</td>
-      <td>TSV</td>
-      <td>Download and load into pandas dataframe</td>
-      <td>>470000 GDAs</td>
-      </tr>
-      </table>
+      <div class="table-responsive">
+          <table class="table">
+          <tr>
+          <th>Source</th>
+          <th>Format</th>
+          <th>Extraction</th>
+          <th>Content</th>
+          </tr>
+          <tr>
+          <td>NIH Genetics Reference</td>
+          <td>HTML</td>
+          <td>Web scrape with beautiful soup</td>
+          <td>Disease categories, few GDAs</td>
+          </tr>
+          <tr>
+          <td>DisGeNet</td>
+          <td>CSV</td>
+          <td>Download and load into pandas dataframe</td>
+          <td>>420000 GDAs</td>
+          </tr>
+          <tr>
+          <td>Human Phenotype Ontology</td>
+          <td>SQL & TSV</td>
+          <td>Query through sqlite3, ipython, and pandas</td>
+          <td>>115000 GDAs</td>
+          </tr>
+          <tr>
+          <td>DISEASES</td>
+          <td>TSV</td>
+          <td>Download and load into pandas dataframe</td>
+          <td>>470000 GDAs</td>
+          </tr>
+          </table>
+      </div>
       
       <p>&nbsp;</p>
 
-      <h2 class="subheading">Data analysis</h2>
+      <h2 class="subheading" id="analysis">Data analysis</h2>
 
-        <figure class="figgda" >
+        <figure class="figscore" >
         <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
         <img src="static/fullhist.png" width="100%">
         </figure>
 
       <p>There are two metrics based on the strength of association and the number of associations for each individual gene and each individual disease.</p>
-      <ul><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i><br><br>
-      <i>0 < Strength of association < 1</i>
-      </ul>
-  	  <ul><b><i>Specificity score</b> is the inversion of the frequency describing the number of genes for an associated disease and the number of diseases for the associated gene. For example, </i><br><br>
-  	  <i>0 < Gene and disease frequency < 1</i>
-  	  </ul>
+      <ol>
+      <li><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i><br><br>
+      <i>0 < Strength of association < 1</i></li>
+  	  <li><b><i>Specificity score</b> is the inversion of the frequency describing the number of genes for an associated disease and the number of diseases for the associated gene. For example, </i><br><br>
+  	  <i>0 < Gene and disease frequency < 1</i></li>
+  	  </ol>
 
       <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About Page</a> has additional information concerning the strength of association metric.</p>
-    
-      <p>&nbsp;</p>
-  </div>
 
-    <div class="footer" id="grad1">
-      <h3 class="footertext" id="grad1">Last Updated: {{ updated }}</h3>
-    </div>
-  </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-  </body>
+
+    <!-- Map -->
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <hr class="large">                
+                    <h4><strong>Contact Us</strong></h4>
+                    <p>By Email or Linkedin</p>
+
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a 
+                        href="mailto:daniel.bricarello@mg.thedataincubator.com">Email</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href = 
+                            "https://www.linkedin.com/in/dan-bricarello-78281555">
+                            <i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+<!-- 
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+ -->
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Last Updated: {{ updated }}</p>
+<!--                     <p class="text-muted">Copyright &copy; 2016</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
 </html>
