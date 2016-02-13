@@ -20,17 +20,19 @@
     <!-- <link href="{{url_for('static',filename='style.css')}}" rel="stylesheet"> -->
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' 
+    type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' 
+    rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href="{{ url_for('static', 
+    filename='font-awesome/css/font-awesome.min.css')}}">
 
-<link rel='stylesheet' href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css')}}">
-
-    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" type="text/css" />
-
-    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" 
+    type="text/css" />
+    <script type="text/javascript" 
+    src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
     {{ jumpscript | safe }}
     {{ script | safe }}
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,10 +46,12 @@
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa 
+    fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i 
+            class="fa fa-times"></i></a>
             <li class="sidebar-brand">
                 <a href="#top"  onclick = $("#menu-close").click(); >Navigation</a>
             </li>
@@ -84,39 +88,35 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-        <p class="intro"><a href="http://truveris.com/insights.html">Rising drug 
-        prices</a> are a serious concern for many Americans.</p>
-          <p class="intro">Little relief is expected as <a 
-          href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> costs 
-          continue to climb. As of 2016, FDA-approved drugs <a 
-          href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 
-          billion and 15 years of development time</a>.</p> 
-        <p class="intro">A large percentage of this effort is wasted on failed drugs. Drug 
-        candidates that make it out of the laboratory and into clinical trials have a <a  
-        href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low success 
-        rate</a> of around 10%.</p>
+            <p class="intro"><a href="http://truveris.com/insights.html">Rising drug 
+            prices</a> are a serious concern for many Americans.</p>
+            <p class="intro">Little relief is expected as <a 
+            href="https://en.wikipedia.org/wiki/Drug_development">drug development</a> 
+            costs continue to climb. As of 2016, FDA-approved drugs <a 
+            href="http://csdd.tufts.edu/news/complete_story/pr_outlook_2016">average $2.6 
+            billion and 15 years of development time</a>.</p> 
+            <p class="intro">A large percentage of this effort is wasted on failed drugs. 
+            Drug candidates that make it out of the laboratory and into clinical trials 
+            have a <a 
+            href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low 
+            success rate</a> of around 10%.</p>
 <!--       <p>This data-centric approach is designed to help large and small pharmaceutical companies optimize the direction of their R&D efforts.</p> -->
-        <p class="intro">A <a 
-        href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 study</a> 
-        suggests that the strength of association between a particular gene and medical 
-        condition can help determine the probability of generating a successful 
-        therapy.</p>
-        </div>
-        <div class="col-sm-6 text-center">
-          <h3 class="fcap">Genetic Links to Health &amp; Disease</h3>
-          <figure class="figgda" >
-            <img src="static/gda_overview.png" width="100%">
-            <figcaption class="fcap">Some diseases may be caused by multiple genes and a 
-            single gene may influence one or more diseases.</figcaption>
-          </figure>
-        </div>
-
-<!--       <p>If the gene-disease link is strong, a therapy that targets the associated gene is  likely to successfully treat the disease.</p> -->
-<!--       <p>Strength of association is determined by the amount and quality of data from computational and laboratory investigations of a specific gene-disease pair.</p> -->
-
+            <p class="intro">A <a 
+            href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 
+            study</a> suggests that the strength of association between a particular gene 
+            and medical condition can help determine the probability of generating a 
+            successful therapy.</p>
+          </div>
+          <div class="col-sm-6 text-center">
+            <h3 class="fcap">Genetic Links to Health &amp; Disease</h3>
+            <figure class="figgda" >
+              <img src="static/gda_overview.png" width="100%">
+              <figcaption class="fcap">Some diseases may be caused by multiple genes and a 
+              single gene may influence one or more diseases.</figcaption>
+            </figure>
+          </div>
         </div>
         <!-- /.row -->
-
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <p class="intro">&nbsp;</p>  
@@ -126,86 +126,82 @@
             prices.</i></h2>
             <hr class="large"> 
           </div>
-        </div>            
+        </div>
+        <!-- /.row -->            
       </div>
       <!-- /.container -->
     </section>
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    
     <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Data Processing</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-search fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Sources</strong>
-                                </h4>
-                                <p>Gene-disease links are stored in databases and academic 
-                                literature.</p>
-                                <a href="#collect" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Aggregation</strong>
-                                </h4>
-                                <p>Data is collected and loaded into a centralized 
-                                database.</p>
-                                <a href="#organize" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-gears fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Analysis</strong>
-                                </h4>
-                                <p>Metrics are created to evaluate gene-disease link 
-                                quality.</p>
-                                <a href="#analysis" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-bar-chart fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Visualization</strong>
-                                </h4>
-                                <p>Comparing gene-disease links based on two key 
-                                metrics.</p>
-                                <a href="#portfolio" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-10 col-lg-offset-1">
+            <h2>Data Processing</h2>
+            <hr class="small">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-search fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                  <strong>Sources</strong>
+                  </h4>
+                  <p>Gene-disease links retrieved from academic databases and 
+                  literature.</p>
+                  <a href="#collect" class="btn btn-light">Learn More</a>
                 </div>
-                <!-- /.col-lg-10 -->
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-sitemap fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                  <strong>Aggregation</strong>
+                  </h4>
+                  <p>Data organized and loaded into a centralized database.</p>
+                  <a href="#organize" class="btn btn-light">Learn More</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-gears fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                  <strong>Analysis</strong>
+                  </h4>
+                  <p>Metrics created to evaluate gene-disease link quality.</p>
+                  <a href="#analysis" class="btn btn-light">Learn More</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="service-item">
+                  <span class="fa-stack fa-4x">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bar-chart fa-stack-1x text-primary"></i>
+                  </span>
+                  <h4>
+                  <strong>Visualization</strong>
+                  </h4>
+                  <p>Comparing gene-disease links based on two key metrics.</p>
+                  <a href="#portfolio" class="btn btn-light">Learn More</a>
+                </div>
+              </div>
             </div>
-            <!-- /.row -->
+            <!-- /.row (nested) -->
+          </div>
+          <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
     </section>
 
     <!-- Callout -->
@@ -217,118 +213,83 @@
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 class="caption">Therapeutic potential of gene-disease 
-                    associations</h2>
-                    <hr class="small">
-                      <a name="gdaplot"></a>
-                      <p style="font-size:0.8em;"><i>Click on a data point to launch a pubmed search for that gene-disease pair</i></p> 
-                      <div class="dropdown">
-                      {% block dropdown %}
-   
-    <form method="post" action="index" class="form-horizontal">
-      <div class="form-group">
-        <label class="col-sm-5 control-label">Disease Category:</label>
-        <div class="col-sm-5">
-           <select class="form-control" name="selectioncat" onchange="javascript: 
-           submit()">
-            {% for dis in catlist %}
-                {% if dis[0]==selcat %}
-                  <option value="{{ dis[0] }}" selected>{{ dis[1] }}</option>
-                {% else %}
-                  <option value="{{ dis[0] }}">{{ dis[1] }}</option>
-                {% endif %}
-            {% endfor %}
-           </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="col-sm-4 control-label">Association Type:</label>
-        <div class="col-sm-2">
-          <select class="form-control" name="selectiontype" onchange="javascript: 
-          submit()">
-          {% for atype in atypelist %}
-              {% if atype[0]==selatype %}
-                <option value="{{ atype[0] }}" selected>{{ atype[1] }}</option>
-              {% else %}
-                <option value="{{ atype[0] }}">{{ atype[1] }}</option>
-              {% endif %}
-          {% endfor %}
-          </select>
-        </div>     
-        <label class="col-sm-3 control-label">Highest Scoring:</label>
-        <div class="col-sm-2">  
-          <select class="form-control" name="selectioncir" onchange="javascript: 
-          submit()">
-          {% for perc in perclist %}
-              {% if perc[0]==selperc %}
-                <option value="{{ perc[0] }}" selected>{{ perc[1] }}</option>
-              {% else %}
-                <option value="{{ perc[0] }}">{{ perc[1] }}</option>
-              {% endif %}
-          {% endfor %}
-          </select>
-        </div>
-      </div>
-        <!-- <input type="submit" value="Display"> -->
-                    {% endblock dropdown %}
-    </form>
-    <div class="error">{{ errmsg | safe }}</div>
-  </div>
-    <div class="bokeh">
-      {{ div | safe }}
-    </div>
-    <p>&nbsp;</p>
-    <h2 class="caption">Gene-disease association by disease area</h2>
-    <hr class="small">
-      <div class="mpl">
-        <img src="static/catdist.png" style="max-width: 100%; max-height: 100%;">
-      </div>
-    </div>
-
-
-                    <!-- 
-<div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="{{url_for('static',filename='portfolio-1.jpg')}}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
- -->
-                    <!-- /.row (nested) -->
-                    <!-- <a href="#" class="btn btn-dark">View More Items</a> -->
+      <div class="container">
+        <div class="row">
+          <div id="gdaplot" class="col-lg-10 col-lg-offset-1 text-center">
+            <h2 class="caption">Therapeutic potential of gene-disease associations</h2>
+            <hr class="small">
+<!--             <a name="gdaplot"></a> -->
+            <p style="font-size:0.8em;"><i>Click on a data point to launch a pubmed search 
+            for that gene-disease pair</i></p> 
+            <div class="dropdown">
+              {% block dropdown %}
+              <form method="post" action="index" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-sm-5 control-label">Disease Category:</label>
+                  <div class="col-sm-5">
+                    <select class="form-control" name="selectioncat" 
+                    onchange="javascript:submit()">
+                    {% for dis in catlist %}
+                      {% if dis[0]==selcat %}
+                        <option value="{{ dis[0] }}" selected>{{ dis[1] }}</option>
+                      {% else %}
+                        <option value="{{ dis[0] }}">{{ dis[1] }}</option>
+                      {% endif %}
+                    {% endfor %}
+                    </select>
+                  </div>
                 </div>
-                <!-- /.col-lg-10 -->
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Association Type:</label>
+                  <div class="col-sm-2">
+                    <select class="form-control" name="selectiontype" 
+                    onchange="javascript:submit()">
+                    {% for atype in atypelist %}
+                      {% if atype[0]==selatype %}
+                        <option value="{{ atype[0] }}" selected>{{ atype[1] }}</option>
+                      {% else %}
+                        <option value="{{ atype[0] }}">{{ atype[1] }}</option>
+                      {% endif %}
+                    {% endfor %}
+                    </select>
+                  </div>     
+                  <label class="col-sm-3 control-label">Highest Scoring:</label>
+                  <div class="col-sm-2">  
+                    <select class="form-control" name="selectioncir" 
+                    onchange="javascript:submit()">
+                    {% for perc in perclist %}
+                      {% if perc[0]==selperc %}
+                        <option value="{{ perc[0] }}" selected>{{ perc[1] }}</option>
+                      {% else %}
+                        <option value="{{ perc[0] }}">{{ perc[1] }}</option>
+                      {% endif %}
+                    {% endfor %}
+                    </select>
+                  </div>
+                </div>
+                <!-- <input type="submit" value="Display"> -->
+                {% endblock dropdown %}
+              </form>
+              <div class="error">
+                {{ errmsg | safe }}
+              </div>
             </div>
-            <!-- /.row -->
+            <!-- /.dropdown -->
+            <div class="bokeh">
+              {{ div | safe }}
+            </div>
+            <p>&nbsp;</p>
+            <h2 class="caption">Gene-disease association by disease area</h2>
+            <hr class="small">
+            <div class="mpl">
+              <img src="static/catdist.png" style="max-width: 100%; max-height: 100%;">
+            </div>
+          </div>
+          <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
     </section>
 
     <!-- Call to Action -->
@@ -338,120 +299,127 @@
                 <div class="col-lg-12 text-center">
                     <h3>Still curious about the analysis?</h3>
                     <a href="#details" class="btn btn-lg btn-light">Continue Reading</a>
-<!--                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
-
                 </div>
             </div>
         </div>
     </aside>
 
+    <!-- Processing details -->
     <section id="details" class="about">
       <div class="container">
         <div class="row">
-          <h2 class="subheading" id="collect">Data collection</h2>
-          <p>Data is sourced primarily from academic researchers who share their results 
-          through a variety of public databases.</p>
-          <ul>
-            <li>A list of around 10,000 established genetic conditions is available from the <a href="http://ghr.nlm.nih.gov/">NIH Genetics Home Reference</a>.</li>
-            <li>A list of gene-disease associations from peer-reviewed journals and 
-            several public databases is available at <a 
-            href="http://www.disgenet.org/">DisGeNet</a>. This database is current as of 
-            August 2015. This resource compiles information from:</li>
-            <ul>
-              <li>Curated databases: <a href="http://www.uniprot.org/">UniProt</a>, <a 
-              href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a 
-              href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar</a>.
-              </li>
-              <li>Automated databases: <a href="http://ctdbase.org/">Comparative 
-              Toxicogenomics Database</a>, <a href="http://www.informatics.jax.org/">Mouse 
-              Genome Database</a>, <a href="http://rgd.mcw.edu/">Rat Genome Database</a>.
-              </li>
-              <li>Literature resources: <a 
-              href="http://geneticassociationdb.nih.gov/">Genetic Association 
-              Database</a>, <a 
-              href="http://www.dbs.ifi.lmu.de/~bundschu/LHGDN.html">Literature-derived 
-              Human Gene-Disease Network </a>, <a 
-              href="http://ibi.imim.es/befree/">BeFree</a>.
-              </li>
-            </ul>
-            <li>The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype 
-            Ontology</a> database contains human-only associations between genes and 
-            diseases organized by phenotype. It is designed not only to identify 
-            gene-disease associations but also demonstrate how these links can be put to 
-            use by the medical community.</li>
-            <li>The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database 
-            contains gene-disease associations extracted from biomedical research 
-            abstracts with text mining algorithms.
-            </li>
-          </ul>
-        <p>&nbsp;</p>
-        <hr class="xlarge">
-        <!-- <p>&nbsp;</p> -->
-        <h2 class="subheading" id="organize">Data organization</h2>
-        <div class="table-responsive">
-          <table class="table">
-          <tr>
-          <th>Source</th>
-          <th>Format</th>
-          <th>Extraction</th>
-          <th>Content</th>
-          </tr>
-          <tr>
-          <td>NIH Genetics Reference</td>
-          <td>HTML</td>
-          <td>Web scrape with beautiful soup</td>
-          <td>Disease categories, few GDAs</td>
-          </tr>
-          <tr>
-          <td>DisGeNet</td>
-          <td>CSV</td>
-          <td>Download and load into pandas dataframe</td>
-          <td>>420000 GDAs</td>
-          </tr>
-          <tr>
-          <td>Human Phenotype Ontology</td>
-          <td>SQL & TSV</td>
-          <td>Query through sqlite3, ipython, and pandas</td>
-          <td>>115000 GDAs</td>
-          </tr>
-          <tr>
-          <td>DISEASES</td>
-          <td>TSV</td>
-          <td>Download and load into pandas dataframe</td>
-          <td>>470000 GDAs</td>
-          </tr>
-          </table>
+          <div class="col-lg-12">
+              <h2 class="subheading" id="collect">Data collection</h2>
+              <p>Data is sourced primarily from academic researchers who share their results through a variety of public databases.</p>
+              <ul>
+                <li>
+                A list of around 10,000 established genetic conditions is available from 
+                the <a href="http://ghr.nlm.nih.gov/">NIH Genetics Home Reference</a>.
+                </li>
+                <li>
+                A list of gene-disease associations from peer-reviewed journals and 
+                several public databases is available at <a 
+                href="http://www.disgenet.org/">DisGeNet</a>. This database is current as of August 2015. This resource compiles information from:
+                </li>
+                <ul>
+                  <li>
+                  Curated databases: <a href="http://www.uniprot.org/">UniProt</a>, <a 
+                  href="http://ctdbase.org/">Comparative Toxicogenomics Database</a>, <a 
+                  href="http://www.ncbi.nlm.nih.gov/clinvar/">ClinVar</a>.
+                  </li>
+                  <li>
+                  Automated databases: <a href="http://ctdbase.org/">Comparative 
+                  Toxicogenomics Database</a>, <a href="http://www.informatics.jax.org/">Mouse Genome Database</a>, <a href="http://rgd.mcw.edu/">Rat Genome Database</a>.
+                  </li>
+                  <li>
+                  Literature resources: <a href="http://geneticassociationdb.nih.gov/">Genetic Association Database</a>, <a 
+                  href="http://www.dbs.ifi.lmu.de/~bundschu/LHGDN.html">Literature-derived 
+                  Human Gene-Disease Network </a>, <a 
+                  href="http://ibi.imim.es/befree/">BeFree</a>.
+                  </li>
+                </ul>
+                <li>
+                The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype 
+                Ontology</a> database contains human-only associations between genes and 
+                diseases organized by phenotype. It is designed not only to identify 
+                gene-disease associations but also demonstrate how these links can be put to 
+                use by the medical community.
+                </li>
+                <li>
+                The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database 
+                contains gene-disease associations extracted from biomedical research 
+                abstracts with text mining algorithms.
+                </li>
+              </ul>
+              <p>&nbsp;</p>
+              <hr class="xlarge">
+              <h2 class="subheading" id="organize">Data organization</h2>
+              <div class="table-responsive">
+                 <table class="table">
+                  <tr>
+                  <th>Source</th>
+                  <th>Format</th>
+                  <th>Extraction</th>
+                  <th>Content</th>
+                  </tr>
+                  <tr>
+                  <td>NIH Genetics Reference</td>
+                  <td>HTML</td>
+                  <td>Web scrape with beautiful soup</td>
+                  <td>Disease categories, few GDAs</td>
+                  </tr>
+                  <tr>
+                  <td>DisGeNet</td>
+                  <td>CSV</td>
+                  <td>Download and load into pandas dataframe</td>
+                  <td>>420000 GDAs</td>
+                  </tr>
+                  <tr>
+                  <td>Human Phenotype Ontology</td>
+                  <td>SQL & TSV</td>
+                  <td>Query through sqlite3, ipython, and pandas</td>
+                  <td>>115000 GDAs</td>
+                  </tr>
+                  <tr>
+                  <td>DISEASES</td>
+                  <td>TSV</td>
+                  <td>Download and load into pandas dataframe</td>
+                  <td>>470000 GDAs</td>
+                  </tr>
+                  </table>
+              </div>
+              <p>&nbsp;</p>
+              <hr class="xlarge">
+              <h2 class="subheading" id="analysis">Data analysis</h2>
+              <figure class="figscore" >
+                <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
+                <img src="static/fullhist.png" width="100%">
+              </figure>
+              <p>There are two metrics based on the strength of association and the number of 
+              associations for each individual gene and each individual disease.</p>
+              <ol>
+                <li>
+                <i><b>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + 
+                WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i>
+                <br><br>
+                <i>0 < Strength of association < 1</i>
+                </li>
+                <li>
+                <i><b>Specificity score</b> is the inversion of the frequency describing the 
+                number of genes for an associated disease and the number of diseases for the 
+                associated gene. For example, </i>
+                <br><br>
+                <i>0 < Gene and disease frequency < 1</i>
+                </li>
+              </ol>
+              <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About 
+              Page</a> has additional information concerning the strength of association 
+              metric.</p>
+          </div>
         </div>
-        <p>&nbsp;</p>
-        <hr class="xlarge">
-        <!-- <p>&nbsp;</p> -->
-        <h2 class="subheading" id="analysis">Data analysis</h2>
-        <figure class="figscore" >
-          <figcaption class="fcap">Distribution of GDA Association Scores</figcaption>
-          <img src="static/fullhist.png" width="100%">
-        </figure>
-      <p>There are two metrics based on the strength of association and the number of associations for each individual gene and each individual disease.</p>
-      <ol>
-        <li><b><i>Association score</b> = ( WUniProt + WCTDhuman + WClinVar ) + ( WRat + 
-        WMouse ) + ( WGAD + WLHGDN + WBeFree ) + WHPO + WDISEASES</i>
-        <br><br>
-        <i>0 < Strength of association < 1</i>
-        </li>
-  	    <li><b><i>Specificity score</b> is the inversion of the frequency describing the 
-  	    number of genes for an associated disease and the number of diseases for the 
-  	    associated gene. For example, </i>
-  	    <br><br>
-  	    <i>0 < Gene and disease frequency < 1</i>
-  	    </li>
-  	  </ol>
-      <p>The <a href="http://www.disgenet.org/web/DisGeNET/menu/dbinfo">DisGeNet About 
-      Page</a> has additional information concerning the strength of association 
-      metric.</p>
-
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
     </section>
 
 
@@ -463,8 +431,10 @@
                     <h2>About Me</h2>
                 </div>
             </div>
+<!-- 
         </div>
         <div class="container">
+ -->
             <div class="row">
               <div class="col-md-3">
                 <img src="static/headshot.jpg" class="img-rounded">

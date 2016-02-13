@@ -15,6 +15,7 @@ body {
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 20px;
+    overflow-x:hidden;
 }
 
 .text-vertical-center {
@@ -176,9 +177,6 @@ hr.xlarge {
 
 .about {
     padding: 70px 0 70px 0;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
 }
 
 /* Services */
