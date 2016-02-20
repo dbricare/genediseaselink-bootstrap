@@ -254,13 +254,11 @@ footer {
     font-size: 14px; 
 }
 
-/* @grid-gutter-width: 30px; */
+/* Custom Styles */
 
 li              { margin-bottom: 24px; }
 label           { font-family: 'Raleway', sans-serif; 
                   font-weight: 400; text-decoration: none;}
-
-/* .centered { */
 
 .page           { border: 0px solid #fff; padding: 0px; background: white; }
 .page-primary	{ padding: 0px; border: 0px solid #000; width: 90%; margin: auto; }
