@@ -1,9 +1,8 @@
-# Information on web files for the Genetic Links to Health project
-___
+## Information on web files for the Genetic Links to Health project
 
 This repository is for the website at [http://www.genediseaselink.com](http://www.genediseaselink.com).
 
-The website is a heroku app that uses Python 3 and the [flask framework](http://flask.pocoo.org/). Flask uses a Python WSGI library to ensure the app and webserver communicate smoothly and jinja to create webpage templates. Deployment on Heroku uses a git-based interface for convenience.
+The website is a heroku app that uses Python 3 and the [flask framework](http://flask.pocoo.org/). Flask uses a Python WSGI library (Werkzeug) to ensure the app and webserver communicate smoothly and jinja to create webpage templates. Deployment on Heroku uses a git-based interface for convenience.
 
 Important files:
 
