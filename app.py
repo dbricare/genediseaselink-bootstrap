@@ -31,7 +31,7 @@ atype_dict = {'all': 'All', 'genetic': 'GeneticVariation',
               
 perc_dict = {'00': 'Not Selected', '01': 'Top 1%', '05': 'Top 5%', 
              '10': 'Top 10%', '15': 'Top 15%', '20': 'Top 20%', '25': 'Top 25%'}
-
+             
 @app.route('/')
 def main():
     return redirect('/index')
@@ -44,8 +44,7 @@ def index():  #remember the function name does not need to match the URL
     # Load plot data
 #     dfall = pd.read_csv('GeneDiseaseMoreCats.csv')
 #     dfall = pd.read_csv('ThreeGDA.tsv',sep='\t')
-    dfall = pd.read_csv('GDAallthreehigh.tsv', sep='\t')
-    dfall.fillna(value='Not Available', inplace=True)
+    dfall = pd.read_csv('gda20160315.tsv', sep='\t')
     dfstash = dfall.copy()
     
     # create pull-down menu list
@@ -98,18 +97,19 @@ def index():  #remember the function name does not need to match the URL
             desc=dfall['diseaseName'],
             desc2=dfall['geneSymbol'],
             cat=dfall['category'],
-            assoc=dfall['associationType']
+            assoc=dfall['associationType'],
+            prev=dfall['Prevalence']
         )
     )
 
     hover = HoverTool(tooltips=[("Disease", "@desc"), ("Category", "@cat"), 
-    ("Gene", "@desc2"), ("Type", "@assoc"), ("Association", "@x{0.000}"), ("Specificity", 
-    "@y{0.000}")], names=['pts'])
-
+    ("Prevalence", "@prev"), ("Gene", "@desc2"), ("Type", "@assoc"), 
+    ("Association", "@x{0.000}"), ("Specificity", "@y{0.000}")], names=['pts'])
 
 
     p = figure(plot_width=900, plot_height=600, tools=['box_zoom','pan','reset',
-    'save',hover,'tap'], x_range=[0,0.8], y_range=[0,0.8], title='Gene-disease pairs above high-quality threshold')
+    'save',hover,'tap'], x_range=[0,0.8], y_range=[0,0.8], 
+    title='Associations above high-quality threshold')
     p.title_text_font = 'Source Sans Pro'
     p.xaxis.axis_label = 'Association Score'
     p.yaxis.axis_label = 'Specificity Score'
@@ -124,8 +124,9 @@ def index():  #remember the function name does not need to match the URL
         p.patch(xcir, ycir, line_color='#33ff33', fill_alpha=0.15, color='#ccffcc', 
         line_width=1)
 
-    p.circle('x', 'y', size=20, fill_alpha=0.8, color=dfall['color'], source=source, 
-    line_width=1, line_color='#000000', name='pts')
+    p.circle('x', 'y', size=15+dfall['PrevalenceCode']*5, fill_alpha=0.5, 
+    color=dfall['color'], source=source, line_width=0.75, line_color='#000000', 
+    name='pts')
     
     url = "http://www.ncbi.nlm.nih.gov/pubmed/?term=@desc+@desc2"
     taptool = p.select(type=TapTool)

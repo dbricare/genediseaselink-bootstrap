@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gene Links to Health</title>
+    <title>Genetic Links to Health</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static',filename='bootstrap.min.css')}}" rel="stylesheet">
@@ -27,6 +27,7 @@
     <link rel='stylesheet' href="{{ url_for('static', 
     filename='font-awesome/css/font-awesome.min.css')}}">
 
+    <!-- Bokeh JS and CSS -->
     <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" 
     type="text/css" />
     <script type="text/javascript" 
@@ -68,6 +69,10 @@
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Results</a>
             </li>
             <li>
+                <a href="#interpret" onclick = $("#menu-close").click(); >Interpretation
+                </a>
+            </li>
+            <li>
                 <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
         </ul>
@@ -100,7 +105,6 @@
             have a <a 
             href="http://www.nature.com/nbt/journal/v32/n1/abs/nbt.2786.html">very low 
             success rate</a> of around 10%.</p>
-<!--       <p>This data-centric approach is designed to help large and small pharmaceutical companies optimize the direction of their R&D efforts.</p> -->
             <p class="intro">A <a 
             href="http://www.nature.com/ng/journal/v47/n8/full/ng.3314.html">2015 
             study</a> suggests that the strength of association between a particular gene 
@@ -121,9 +125,9 @@
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <p class="intro">&nbsp;</p>  
             <hr class="large">       
-            <h2 class="subheading"><i>Considering gene-disease associations when selecting 
-            drug candidates can help reduce costs, development time and consumer drug 
-            prices.</i></h2>
+            <h2 class="subheading"><i>Understanding relationships between genes and 
+            disease can help make drug development more efficient: reducing costs, 
+            development time and consumer drug prices.</i></h2>
             <hr class="large"> 
           </div>
         </div>
@@ -284,6 +288,12 @@
             <div class="mpl">
               <img src="static/catdist.png" style="max-width: 100%; max-height: 100%;">
             </div>
+            <p>&nbsp;</p>
+            <h2 class="caption">Prevalence of individual diseases</h2>
+            <hr class="small">
+            <div class="mpl">
+              <img src="static/prevdist.png" style="max-width: 100%; max-height: 100%;">
+            </div>
           </div>
           <!-- /.col-lg-10 -->
         </div>
@@ -293,13 +303,67 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
+    <aside class="call-to-author bg-primary" id="interpret">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>Still curious about the analysis?</h3>
-                    <a href="#details" class="btn btn-lg btn-light">Continue Reading</a>
+              <div class="col-lg-12 text-center">
+                <h2>Interpreting the Results</h2>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row tnail">
+              <div class="col-xs-9">
+              <h3><u>Therapeutic potential of gene-disease associations</u></h3>
+              <p>Gene-disease pairs with the highest association and specificity scores 
+              possess the strongest potential for therapeutic success. The size of each 
+              data point indicates the prevalence of the associated disease: larger 
+              circles indicate greater prevalence.</p>
+              </div>
+              <div class="col-xs-3">
+              <img src="static/tnbokeh.png" class="tn">
+              </div>
+            </div>
+            <div class="row tnail">
+              <div class="col-xs-9">
+              <h3><u>Gene-disease association by disease area</u></h3>
+              <p>Each disease is classified according to the categories presented by the 
+              NIH Genetics Home Reference. The category 'Not Available' indicates the 
+              disease is not included in the database. The color-coding here is consistent 
+              with the first figure.</p>
+              </div>
+              <div class="col-xs-3">
+              <img src="static/tncatdist.png" class="tn">
+              </div>
+            </div>
+            <div class="row tnail">
+              <div class="col-xs-9">
+              <h3><u>Prevalence of individual diseases</u></h3>
+              <p>The probability of occurrence for each disease is grouped into several
+              categories and the number of diseases in each category is given. The
+              category 'Not Available' indicates the disease was not present in the 
+              Orphanet database. The category 'Unknown' indicates the disease is present
+              in the database but researchers have not identified its prevalence.</p>
+              </div>
+              <div class="col-xs-3">
+              <img src="static/tnprevdist.png" class="tn">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                <p>&nbsp;</p>
+                <hr class="large">
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 text-center tn">
+                <h3>Continue reviewing the visualizations?</h3>
+                <a href="#portfolio" class="btn btn-lg btn-light">Return to Figures</a>
+              </div>
+              <div class="col-sm-6 text-center tn">
+                    <h3>Curious about the analysis?</h3>
+                    <a href="#details" class="btn btn-lg btn-light">Continue Reading</a>
+              </div>
             </div>
         </div>
     </aside>
@@ -342,13 +406,17 @@
                 The <a href="http://human-phenotype-ontology.github.io/">Human Phenotype 
                 Ontology</a> database contains human-only associations between genes and 
                 diseases organized by phenotype. It is designed not only to identify 
-                gene-disease associations but also demonstrate how these links can be put to 
-                use by the medical community.
+                gene-disease associations but also demonstrate how these links can be put 
+                to use by the medical community.
                 </li>
                 <li>
                 The <a href="http://diseases.jensenlab.org/Search">DISEASES</a> database 
                 contains gene-disease associations extracted from biomedical research 
                 abstracts with text mining algorithms.
+                </li>
+                <li>
+                Information on disease prevalence comes from 
+                <a href="http://www.orpha.net">Orphanet</a>.
                 </li>
               </ul>
               <p>&nbsp;</p>
@@ -405,9 +473,9 @@
                 <i>0 < Strength of association < 1</i>
                 </li>
                 <li>
-                <i><b>Specificity score</b> is the inversion of the frequency describing the 
-                number of genes for an associated disease and the number of diseases for the 
-                associated gene. For example, </i>
+                <i><b>Specificity score&nbsp;</b></i> is the inversion of the frequency 
+                describing the number of genes for an associated disease and the number of 
+                diseases for the associated gene. For example,
                 <br><br>
                 <i>0 < Gene and disease frequency < 1</i>
                 </li>
@@ -447,10 +515,9 @@
                 I continued developing this technology as a post-doc in Food Science &amp; 
                 Technology and eventually co-founded Vislactis Biotherapeutics to see if 
                 this idea could help treat certain medical conditions.<br><br>
-                This entrepreneurial experience combined with my education in math and 
-                physics has driven me to pursue a career in data science, where I hope to 
-                apply my technical &amp; analytical skills to help business make smart 
-                decisions.</p>
+                This entrepreneurial experience combined with my quantitative background 
+                has driven me to pursue a career in data science, where I hope to 
+                apply my analytical skills to help businesses make smart decisions.</p>
                     <!-- <a href="#details" class="btn btn-lg btn-light">Continue Reading</a> -->
 <!--                     <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
                 </div>
@@ -473,7 +540,7 @@
                         <li>
                         <a href="https://gist.github.com/dbricare/23e57dce86e37de20d3d">
                         <i class="fa fa-github-square fa-fw fa-3x"></i></a>
-                        <a href="mailto:daniel.bricarello@mg.thedataincubator.com">
+                        <a href="mailto:dabricarello@ucdavis.edu">
                         <i class="fa fa-envelope-square fa-fw fa-3x"></i></a>
                         <a href = "https://www.linkedin.com/in/dan-bricarello-78281555">
                         <i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>

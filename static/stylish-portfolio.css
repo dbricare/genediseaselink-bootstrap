@@ -232,7 +232,7 @@ hr.xlarge {
 }
 
 .call-to-author {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 }
 
 /* Map */
@@ -280,6 +280,9 @@ label           { font-family: 'Raleway', sans-serif;
 				  width: 90%; margin: 0 auto; }
 .dtbl           { margin: 0px auto; border: 1px; }
 .author			{ text-align: left; padding: 10px 0 0 10px; }
+
+.tnail          { display: flex; align-items: center; }
+.tn             { max-height: 100%; max-width: 100%; padding: 12px; }
 
 .img-rounded.auth {
     /* float: left; */ 
