@@ -165,7 +165,8 @@ hr.xlarge {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../static/bg.jpg) no-repeat center center scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+    url(../static/bgdoc.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -283,6 +284,7 @@ label           { font-family: 'Raleway', sans-serif;
 
 .tnail          { display: flex; align-items: center; }
 .tn             { max-height: 100%; max-width: 100%; padding: 12px; }
+.bg-secondary   { color: #fff; background-color: #2d6c9f; }
 
 .img-rounded.auth {
     /* float: left; */ 

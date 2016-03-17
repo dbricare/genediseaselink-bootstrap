@@ -77,7 +77,7 @@ def index():  #remember the function name does not need to match the URL
             dfall = dfstash.copy()
             selcat='all'
             selatype='all'
-            errmsg='No matching gene-disease associations found.'
+            errmsg='No data found for selected filters'
       
     
     yy = dfall['count_total']

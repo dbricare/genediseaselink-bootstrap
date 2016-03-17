@@ -224,7 +224,8 @@
             <hr class="small">
 <!--             <a name="gdaplot"></a> -->
             <p style="font-size:0.8em;"><i>Click on a data point to launch a pubmed search 
-            for that gene-disease pair</i></p> 
+            for that gene-disease pair<br>
+            <a href="#interpret">Tips on interpreting the graph</a></i></p> 
             <div class="dropdown">
               {% block dropdown %}
               <form method="post" action="index" class="form-horizontal">
@@ -303,7 +304,7 @@
     </section>
 
     <!-- Call to Action -->
-    <aside class="call-to-author bg-primary" id="interpret">
+    <aside class="call-to-author bg-secondary" id="interpret">
         <div class="container">
             <div class="row">
               <div class="col-lg-12 text-center">
@@ -316,9 +317,8 @@
               <div class="col-xs-9">
               <h3><u>Therapeutic potential of gene-disease associations</u></h3>
               <p>Gene-disease pairs with the highest association and specificity scores 
-              possess the strongest potential for therapeutic success. The size of each 
-              data point indicates the prevalence of the associated disease: larger 
-              circles indicate greater prevalence.</p>
+              possess the strongest potential for therapeutic success. Larger 
+              circles represent greater prevalence of the associated disease.</p>
               </div>
               <div class="col-xs-3">
               <img src="static/tnbokeh.png" class="tn">
@@ -349,19 +349,25 @@
               <img src="static/tnprevdist.png" class="tn">
               </div>
             </div>
+<!-- 
             <div class="row">
                 <div class="col-sm-12 text-center">
                 <p>&nbsp;</p>
                 <hr class="large">
                 </div>
             </div>
+ -->
+        </div>
+    </aside>
+    <aside class="call-to-author bg-primary">
+        <div>
             <div class="row">
               <div class="col-sm-6 text-center tn">
                 <h3>Continue reviewing the visualizations?</h3>
                 <a href="#portfolio" class="btn btn-lg btn-light">Return to Figures</a>
               </div>
               <div class="col-sm-6 text-center tn">
-                    <h3>Curious about the analysis?</h3>
+                    <h3>Proceed to the analysis?</h3>
                     <a href="#details" class="btn btn-lg btn-light">Continue Reading</a>
               </div>
             </div>
